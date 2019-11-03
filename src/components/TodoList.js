@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { deleteTodo, editTodo, completeTodo } from "../actions/actions";
+import PropTypes from "prop-types";
 
 class TodoList extends Component {
   state = {
@@ -94,6 +95,15 @@ class TodoList extends Component {
   }
 }
 
+//checking prop types
+TodoList.propTypes = {
+  selectedBucket: PropTypes.string.isRequired,
+  deleteTodo: PropTypes.func.isRequired,
+  editTodo: PropTypes.func.isRequired,
+  completeTodo: PropTypes.func.isRequired
+};
+
+//map state as props to the component
 const mapStateToProps = state => {
   return {
     selectedBucket: state.todos.selectedBucket

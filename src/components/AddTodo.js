@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { addTodo, addBucket } from "../actions/actions";
+import PropTypes from "prop-types";
 
 class AddTodo extends Component {
   constructor() {
@@ -139,6 +140,14 @@ class AddTodo extends Component {
     );
   }
 }
+
+//check for prop types
+AddTodo.propTypes = {
+  todos: PropTypes.object.isRequired,
+  addTodo: PropTypes.func.isRequired,
+  addBucket: PropTypes.func.isRequired
+};
+//map states as props to the component
 const mapStateToProps = state => {
   return {
     todos: state.todos

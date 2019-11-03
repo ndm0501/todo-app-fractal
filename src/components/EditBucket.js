@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { addBucket } from "../actions/actions";
+import PropTypes from "prop-types";
 
 class EditBucket extends Component {
   constructor() {
@@ -56,6 +57,10 @@ class EditBucket extends Component {
     );
   }
 }
+//check prop types
+EditBucket.propTypes = {
+  addBucket: PropTypes.func.isRequired
+};
 export default connect(
   null,
   { addBucket }

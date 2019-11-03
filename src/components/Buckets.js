@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { selectBucket } from "../actions/actions";
 import TodoList from "./TodoList";
+import PropTypes from "prop-types";
 
 class Buckets extends Component {
   render() {
-    
     //button list toselect a bucket
     const bucketButtons = this.props.todos.buckets.map((bucket, i) => (
       <button
@@ -35,6 +35,12 @@ class Buckets extends Component {
     );
   }
 }
+//check prop types
+Buckets.propTypes = {
+  todos: PropTypes.object.isRequired,
+  selectBucket: PropTypes.func.isRequired
+};
+//map state as props to component
 const mapStateToProps = state => {
   return {
     todos: state.todos
