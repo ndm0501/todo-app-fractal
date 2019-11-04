@@ -15,12 +15,10 @@ class TodoList extends Component {
   }
 
   onDelete = id => {
-    console.log("Delete clicked", id);
     this.props.deleteTodo(id);
   };
 
   onEditClick = id => {
-    console.log("Edit clicked!");
     this.setState({ showForm: true, editId: id });
   };
 
@@ -35,7 +33,6 @@ class TodoList extends Component {
   };
 
   render() {
-    console.log(this.props, "tdl");
     const listItems = this.props.todos.map((todo, i) => (
       <li
         className="list-group-item text-left d-flex justify-content-between mt-1"

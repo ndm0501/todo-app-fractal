@@ -40,7 +40,6 @@ initState.buckets = Array.from(
 const todoReducer = (state = initState, action) => {
   switch (action.type) {
     case ADD_TODO:
-      console.log("Adding todo!", action.payload);
       const newTodosAfterAdding = [action.payload, ...state.todos];
       return {
         ...state,
@@ -49,12 +48,11 @@ const todoReducer = (state = initState, action) => {
       };
 
     case COMPLETE_TODO:
-      console.log("todo completed", action.payload);
       const newTodosAfterCompleting = state.todos.map(todo => {
         if (todo.id !== action.payload) {
           return todo;
         } else {
-          //toggle 
+          //toggle
           return { ...todo, isDone: todo.isDone ? false : true };
         }
       });
@@ -64,7 +62,6 @@ const todoReducer = (state = initState, action) => {
       };
 
     case DELETE_TODO:
-      console.log("deleting....");
       //find the todo with id and delete
       const newTodosAfterDeleting = state.todos.filter(
         todo => todo.id !== action.payload
@@ -75,7 +72,6 @@ const todoReducer = (state = initState, action) => {
       };
 
     case EDIT_TODO:
-      console.log("editing...");
       // find the todo with id and edit
       const newTodosAfterEditing = state.todos.map(todo => {
         if (todo.id !== action.payload.id) {
@@ -93,7 +89,6 @@ const todoReducer = (state = initState, action) => {
       return { ...state, selectedBucket: action.payload };
 
     case ADD_BUCKET:
-      console.log("add bucket");
       const bucketListAfterAdding = Array.from(
         new Set([...state.buckets, action.payload.toLowerCase()])
       );

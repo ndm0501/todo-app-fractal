@@ -54,7 +54,7 @@ class AddTodo extends Component {
     this.setState({ checked: e.target.checked });
   };
   render() {
-    console.log(this.state, "ss");
+    
     const bucketOptions = this.props.todos.buckets.map((bucket, i) => (
       <option key={i} value={bucket}>
         {bucket.toUpperCase()}
