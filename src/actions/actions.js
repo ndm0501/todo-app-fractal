@@ -39,6 +39,7 @@ export const addBucket = bucket => dispatch => {
   //dispatching after 100 millisecs
   setTimeout(() => dispatch({ type: ADD_BUCKET, payload: bucket }), 100);
 };
+
 //when todo is complete, change isDone to true
 export const completeTodo = id => {
   return { type: COMPLETE_TODO, payload: id };

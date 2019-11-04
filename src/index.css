@@ -46,3 +46,7 @@ li {
 .todo-done {
   text-decoration: line-through;
 }
+.fa, .fas{
+  color: #0d7770;
+
+}

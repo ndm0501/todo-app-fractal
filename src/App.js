@@ -3,7 +3,7 @@ import "./App.css";
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Error from "./components/Error";
-import EditBucket from "./components/EditBucket";
+import AddBucket from "./components/AddBucket";
 import Navbar from "./components/Navbar";
 import LandingComponent from "./components/LandingComponent";
 import AddTodo from "./components/AddTodo";
@@ -17,7 +17,7 @@ function App() {
           <Route exact path="/" component={LandingComponent} />
           <Route exact path="/home" component={LandingComponent} />
           <Route exact path="/add-todo" component={AddTodo} />
-          <Route exact path="/add-bucket" component={EditBucket} />
+          <Route exact path="/add-bucket" component={AddBucket} />
 
           <Route component={Error} />
         </Switch>

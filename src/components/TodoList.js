@@ -81,7 +81,7 @@ class TodoList extends Component {
               type="text"
               onChange={e => this.setState({ newValue: e.target.value })}
             />
-            <input type="submit" value="Save" />
+            <input type="submit" value="Save" className="btn" />
           </form>
         ) : null}
       </div>

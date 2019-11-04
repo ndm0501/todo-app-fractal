@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { addBucket } from "../actions/actions";
 import PropTypes from "prop-types";
 
-class EditBucket extends Component {
+class AddBucket extends Component {
   constructor() {
     super();
     this.state = {
@@ -58,10 +58,10 @@ class EditBucket extends Component {
   }
 }
 //check prop types
-EditBucket.propTypes = {
+AddBucket.propTypes = {
   addBucket: PropTypes.func.isRequired
 };
 export default connect(
   null,
   { addBucket }
-)(EditBucket);
+)(AddBucket);
