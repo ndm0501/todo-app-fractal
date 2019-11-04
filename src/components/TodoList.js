@@ -50,10 +50,13 @@ class TodoList extends Component {
         </div>
 
         <div className="icons text-right">
-          <button className="mr-5" onClick={() => this.onEditClick(todo.id)}>
+          <button
+            className="fa-btn mr-5"
+            onClick={() => this.onEditClick(todo.id)}
+          >
             <i className="fas fa-edit"></i>
           </button>
-          <button onClick={() => this.onDelete(todo.id)}>
+          <button className="fa-btn" onClick={() => this.onDelete(todo.id)}>
             <i className="fas fa-trash"></i>
           </button>
         </div>

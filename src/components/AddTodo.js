@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { addTodo, addBucket } from "../actions/actions";
 import PropTypes from "prop-types";
+import AddBucket from "./AddBucket";
 
 class AddTodo extends Component {
   constructor() {
