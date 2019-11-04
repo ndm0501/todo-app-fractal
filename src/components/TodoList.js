@@ -26,7 +26,7 @@ class TodoList extends Component {
 
   onSubmit = (e, newValue) => {
     e.preventDefault();
-    this.props.editTodo(newValue, this.state.editId);
+    this.props.editTodo(newValue.trim(), this.state.editId);
     this.setState({ showForm: false });
   };
 

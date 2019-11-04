@@ -35,14 +35,14 @@ class AddTodo extends Component {
       //create a new todo object
       const todo = {
         id: Math.random(),
-        todo: this.state.todo,
-        bucket: this.state.bucket,
+        todo: this.state.todo.trim(),
+        bucket: this.state.bucket.trim(),
         isDone: false
       };
       //dipatch todo to add in the list
       this.props.addTodo(todo);
       //add the newly created bucket to state
-      this.props.addBucket(this.state.bucket);
+      this.props.addBucket(this.state.bucket.trim());
       this.setState({
         todo: "",
         bucket: "",

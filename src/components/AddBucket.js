@@ -15,7 +15,7 @@ class AddBucket extends Component {
   onSubmit = e => {
     e.preventDefault();
     if (this.state.bucket !== "") {
-      this.props.addBucket(this.state.bucket);
+      this.props.addBucket(this.state.bucket.trim());
       this.setState({ successMessage: "Bucket Added Successfully!" });
     } else {
       this.setState({ successMessage: "" });
